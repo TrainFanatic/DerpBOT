@@ -39,6 +39,13 @@ bot.on('message', function (user, userID, channelID, message, evt) {
                     message: 'Hello. My Name is DerpBOT!'
                 });
             // Just add any case commands if you want to..
+            case 'mention':
+                bot.sendMessage({
+                    to: channelID,
+                    message: "Hey! Your name is <@!" + userID + ">, right?"
+                });
+            case 'DM':
+                message.author.send("HEY! HERE'S A BLEEPING DM FOR YOU!")
             break;
          }
      }
